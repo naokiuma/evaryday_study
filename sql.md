@@ -34,6 +34,10 @@ before_money、befote_time、
 after_money、after_timeなど。
 
 ## Delete → Insert or Update
+
+参考
+https://oreno-it.info/archives/2855
+
 それぞれの利点
 
 ・コードの見易さ、作りやすさ
