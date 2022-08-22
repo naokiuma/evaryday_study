@@ -33,7 +33,7 @@ ordery by も必須。
 before_money、befote_time、
 after_money、after_timeなど。
 
-## Delete → Insert or Update
+## 「Delete → Insert」　または「まとめてUpdate」
 
 参考
 https://oreno-it.info/archives/2855
