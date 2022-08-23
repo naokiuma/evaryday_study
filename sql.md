@@ -57,3 +57,8 @@ https://oreno-it.info/archives/2855
 https://qiita.com/chihiro/items/5d438549b5869900abdd
 ストアドプロシージャでループ
 https://oreno-it3.info/archives/499
+
+カーソルを使ってやる方法 !役にやつ！
+https://www.wakuwakubank.com/posts/789-mysql-cursor/
+https://style.potepan.com/articles/24824.html
+
