@@ -83,7 +83,7 @@ on p1.name <> p2.name;
 バナナ　みかん
 
 
-## DB以移行など、異なるdbのtbl_aとtbl_bのテーブルが同じか、比較するときに行えるsql（tbl_aとtbl_bの行数がまず同じであることを確認。例として両方3行の場合）
+## DB移行など、異なるdbのtbl_aとtbl_bのテーブルが同じか、比較するときに行えるsql（tbl_aとtbl_bの行数がまず同じであることを確認。例として両方3行の場合）
 select count(*) as row_cnt
 from(select * from tbl_A 
      union
@@ -92,3 +92,40 @@ from(select * from tbl_A
 →結果が3となれば完全一致
 ・・・unionは　allオプションをつけなければ、重複行を削除するため。
 なお、例えば1行違いがあれば4が帰ってくる。
+
+
+## 繰り返し項目を1列にまとめる
+
+社員|child_1|child_2|child_3
+----------------------------
+赤井 一郎     二郎    三郎
+工藤 春子     夏子
+鈴木 夏子
+吉田
+
+こんな感じで繰り返しになっているテーブルを、こんな感じにするには。。
+
+テーブル：personnel
+社員 child
+-----------
+赤井 一郎
+赤井 二郎
+赤井 三郎
+工藤 春子
+工藤 夏子
+工藤 
+鈴木 夏子
+鈴木
+鈴木
+吉田
+吉田
+吉田
+
+select 社員,child_1 as child
+union all
+select 社員,child_2 as child
+union all
+select 社員,child_3 as child
+
+union allでそれぞれの全パターンを抽出。
+childがnullのものを排除したい場合はwhereでそうする
