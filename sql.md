@@ -62,3 +62,23 @@ https://oreno-it3.info/archives/499
 https://www.wakuwakubank.com/posts/789-mysql-cursor/
 https://style.potepan.com/articles/24824.html
 
+
+## 全ての組み合わせを、重複を除外してとる
+
+りんご
+みかん
+バナナ
+
+を、他の物との組み合わせと合わせる
+
+select p1.name AS name_1,p2.name AS name_2
+FROM items p1 inner join items p2
+on p1.name <> p2.name;
+
+りんご　みかん
+りんご　バナナ
+みかん　りんご
+みかん　バナナ
+バナナ　りんご
+バナナ　みかん
+
