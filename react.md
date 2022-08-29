@@ -22,19 +22,21 @@ React Router が独自に定義している同じ名前の history オブジェ�
 
 ## routeのコンポーネント属性について
 routeのコンポーネント属性で呼ばれたコンポーネントのpropsには、
-history、location、matchオブジェクトが格納されている。
+history、location、matchオブジェクトが格納されている。→だが、6系ではhistoryは廃止。
 
 ## uselocationとは
 locationオブジェクトで渡される情報を捕まえる関数。
-locationオブジェクトは。。。こんなの。
+locationオブジェクトは。。。
+https://exampleapp.com/user/patty?from=user-list#friends
+の場合、こんなの。(p-31)
+
 {
 pathname: '/user/patty', search: '?from=user-list', hash: '#friends',
 state: {
 [secretKey]: '9qWV408Zyr', },
 key: '1j3qup', }
+uselocationで渡す依存配列にはこのkeyを使うと良い
 
-
-uselocationで渡す依存配列にはこれを使うと良い
 
 ## useParamsとuseRouteMatchとは
 react routerが提供するmatchオブジェクトをハンドリングするためのapi
@@ -53,4 +55,19 @@ userId: "patty", }
 }
 
 
+## react helmetについて
+どこからでもhtmlドキュメントヘッダを同的に上書きしてくれる。
 
+
+##５系と6系の違い
+
+1.
+Switchが廃止され、Routesが導入。
+<Switch> はマッチした <Route> があり次第、それ以降の評価をせず処理を抜ける。が、<Routes> では最後まで評価した上で、ベストマッチする <Route> にルーティングされる
+並び順によってマッチするものが変わってしまうので、注意が必要
+
+2.nest routeがかけるようになった。
+  
+3.exactおよびstrict属性が廃止。
+  正規表現も使えず、末尾の*のみがマッチする。
+  
