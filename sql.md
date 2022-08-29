@@ -82,3 +82,13 @@ on p1.name <> p2.name;
 バナナ　りんご
 バナナ　みかん
 
+
+## DB以移行など、異なるdbのtbl_aとtbl_bのテーブルが同じか、比較するときに行えるsql（tbl_aとtbl_bの行数がまず同じであることを確認。例として両方3行の場合）
+select count(*) as row_cnt
+from(select * from tbl_A 
+     union
+    select * from tbl_b) tmp
+    
+→結果が3となれば完全一致
+・・・unionは　allオプションをつけなければ、重複行を削除するため。
+なお、例えば1行違いがあれば4が帰ってくる。
