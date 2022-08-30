@@ -62,6 +62,29 @@ https://oreno-it3.info/archives/499
 https://www.wakuwakubank.com/posts/789-mysql-cursor/
 https://style.potepan.com/articles/24824.html
 
+注意！
+ストアドプロシージャをphpmyadminなどで実行する場合は、デリミタで設定した終端文字を戻さないといけない。
+例として
+
+-- ストアドプロシージャの定義
+DELIMITER //
+CREATE PROCEDURE Test()
+BEGIN
+	-- 特になにもしない
+END
+//
+
+-- ストアドプロシージャの実行
+CALL Test();
+
+SELECT * FROM items;
+
+などをまとめて1回のsqlで実行すると、SELECT * FROM items; でエラーになる。
+// の後ろに
+DELIMITER ;
+
+を挿入すると、終端文字は;に戻るので、正常に実行される。
+
 
 ## 全ての組み合わせを、重複を除外してとる
 
