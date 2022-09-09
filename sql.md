@@ -152,3 +152,9 @@ select 社員,child_3 as child
 
 union allでそれぞれの全パターンを抽出。
 childがnullのものを排除したい場合はwhereでそうする
+
+
+## countの中で条件を書くことができる
+
+## codeignitor でjoin先をサブクエリ
+https://www.kabanoki.net/2015/
