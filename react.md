@@ -71,3 +71,8 @@ userId: "patty", }
 3.exactおよびstrict属性が廃止。
   正規表現も使えず、末尾の*のみがマッチする。
   
+## apiサーバーにpostする際、なぜか301がかえる
+  拡張機能のrest_client試した際に301がかえる→
+  https://teratail.com/questions/57999
+  が原因。
+  
