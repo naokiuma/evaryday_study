@@ -168,3 +168,6 @@ shopクーポン_1_の中でtype1
 			
 fromをクーポンにするなら
 coupon	この中で情報は揃ってるはずなので、これを元にすると良さそう	
+
+## row_number使わずにやる方法これ参考になる
+https://gihyo.jp/dev/serial/01/sql_academy2/000102
