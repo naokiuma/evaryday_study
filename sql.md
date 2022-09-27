@@ -169,5 +169,7 @@ shopクーポン_1_の中でtype1
 fromをクーポンにするなら
 coupon	この中で情報は揃ってるはずなので、これを元にすると良さそう	
 
-## row_number使わずにやる方法これ参考になる
+## グループごとに上位いくつかを取得
+https://qiita.com/ryota_i/items/8d0cc238c269fe9ca016
+ちなみにrow_number使わずにやる方法これ参考になる
 https://gihyo.jp/dev/serial/01/sql_academy2/000102
