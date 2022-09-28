@@ -81,4 +81,5 @@ userId: "patty", }
   拡張機能のrest_client試した際に301がかえる→
   https://teratail.com/questions/57999
   が原因。
-  
+ 
+## Contextではデータを渡す側をProviderと呼びデータを受け取る側をConsumerと呼びます。
