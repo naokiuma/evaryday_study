@@ -83,3 +83,10 @@ userId: "patty", }
   が原因。
  
 ## Contextではデータを渡す側をProviderと呼びデータを受け取る側をConsumerと呼びます。
+この辺が参考になった。
+https://nishinatoshiharu.com/react-context-cases/
+  
+  保持した情報をキャッシュなど？で持つには
+  https://nobunobu1717.site/?p=2443
+  で次回やってみる
+  
