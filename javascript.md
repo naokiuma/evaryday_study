@@ -1,3 +1,7 @@
+## jsの文字列判定でundefinedかどうかを判定する時には 'undefined'ではなく、undefinedで中身を見ること！
+※'undefined'　と比較してハマってしまった。。。
+
+
 ## domの変更を監視する(ミューテーションオブザーバー)
 親要素を監視対象にし、その中身が変わることを監視する。<br>
 https://qiita.com/ryo_hisano/items/9f15ae87d691d497bc17
