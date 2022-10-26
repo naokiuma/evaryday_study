@@ -1,10 +1,12 @@
-## domの変更を監視する
-ミューテーションオブザーバー<br>
+## domの変更を監視する(ミューテーションオブザーバー)
 親要素を監視対象にし、その中身が変わることを監視する。<br>
 https://qiita.com/ryo_hisano/items/9f15ae87d691d497bc17
 
 注意点として、オブザーバーのブロックの中で変更を起こしてしまうと、無限ループに陥る。ifなどで制限をつける必要がある。
 ```javascript
+//head内でjquery読み込み
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
 
 
     <div>
