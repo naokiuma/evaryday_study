@@ -1,3 +1,8 @@
+## ローカルにnode.jsのサーバーをたて、そこにdockerから通信をするテストをした(503を意図的に返したくて。
+が、通信できず。コネクションリフューズ。<br>
+dockerは隔離された環境なので、そこからlocalへの通信はできない様子。<br>
+https://matsuand.github.io/docs.docker.jp.onthefly/language/golang/run-containers/
+
 ## jsの文字列判定でundefinedかどうかを判定する時には 'undefined'ではなく、undefinedで中身を見ること！
 ※'undefined'　と比較してハマってしまった。。。
 
