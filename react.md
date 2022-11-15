@@ -1,3 +1,23 @@
+## reactからjsでlaravelにpostする方法
+```
+//こんな感じでformDataに付与する。
+const formData = new FormData()
+formData.append("file", imgData)
+```
+と、
+```
+//こんなふうにheadersにmultipartが必要
+ axios
+  .post(
+    target_URL,
+    {title: title,body: body,status: status,file:formData},
+    {
+     headers: {
+     'Content-Type': 'multipart/form-data',//画像を送る際にはこの指定が必要},withCredentials:true,
+    },
+         
+```
+
 ## 再レンダリングするタイミング
 stateの値が変わるたび、コンポーネントが上から実行される。
 propsが更新されたコンポーネントも再レンダリングされる
