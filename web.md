@@ -10,4 +10,4 @@
 
 
 ・キャッシュhitしたか否かの判断
-x-cache-status: HIT　または miss
+レスポンス情報の、x-cache-status: HIT　または miss
