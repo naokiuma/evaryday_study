@@ -56,6 +56,12 @@ React Router が独自に定義している同じ名前の history オブジェ�
 routeのコンポーネント属性で呼ばれたコンポーネントのpropsには、
 history、location、matchオブジェクトが格納されている。→だが、6系ではhistoryは廃止。
 
+## useEffectとは
+そのコンポーネントが再レンダリングされるたびに呼ばされる。
+常に監視しているとメモリリークなど起きることもあるので、不要になったら購読解除する。<br>
+useeffect中でreturnすると、クリーンアップ関数を使って、そのuseeffectを使わないようにできる<br>
+参考：https://qiita.com/seira/items/e62890f11e91f6b9653f
+
 ## uselocationとは
 locationオブジェクトで渡される情報を捕まえる関数。
 locationオブジェクトは。。。
