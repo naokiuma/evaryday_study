@@ -1,3 +1,52 @@
+## 関数色々
+array_column・・・配列の、第二引数で指定した値のみ返す。selectみたいなイメージ。
+array_unique・・・重複した値を削除する。
+```php
+array_unique(array_column($data['areas'], 'area_id')
+```
+
+例えば下記のようなデータなら、
+
+```php
+	[0] => Array
+        (
+            [area_mid_id] => 13
+            [area_mid_name] => 東京
+        )
+  [1] => Array
+        (
+            [area_mid_id] => 13
+            [area_mid_name] => 東京
+		)
+	[2] => Array
+        (
+            [area_mid_id] => 13
+            [area_mid_name] => 東京
+		)
+	[3] => Array
+        (
+            [area_mid_id] => 14
+            [area_mid_name] => 埼玉
+		)
+  
+```
+まずはarray_colmunで
+```php
+[0] => 13
+[1] => 13
+[2] => 13
+[3] => 14・・・
+```
+
+となり、さらにarray_uniqueで、
+```php
+[0] => 13
+[3] => 14
+```
+となる。
+
+
+
 ## テストで、落ちているサーバーへの通信を試したい時
 
 https://httpstat.us/
