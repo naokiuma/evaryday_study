@@ -24,3 +24,8 @@ print(l[0] + l[1] + l[2]) # 6　（整数として計算される）
  ## 演算子
  基本的にphpやjsと大きくは変わらないが、
  /（割り算） は 実数がかえり、 // は整数部分のみかえる
+
+
+メモ
+https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/2/ITP1_2_A
+マイナスの値を考慮していない
