@@ -26,6 +26,19 @@ a,b,c = map(int,input().split())
 
  ```
  
+ 
+ ## if文
+ 
+ ```
+ 
+if A:
+    print("Yes")
+elif B:
+    print("fo")
+else:
+    print("No")
+    
+ ```
  ## 演算子
  基本的にphpやjsと大きくは変わらないが、
  /（割り算） は 実数がかえり、 // は整数部分のみかえる
