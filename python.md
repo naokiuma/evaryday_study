@@ -47,3 +47,13 @@ else:
 メモ
 https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/2/ITP1_2_A
 マイナスの値を考慮していない
+
+## 標準入力で一行ずつ処理する方法
+下記で1行ずつすすむ
+```
+while True:
+    x = int(input())
+    if x == 0:
+        break
+    print(x)
+```
