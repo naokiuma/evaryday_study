@@ -1,6 +1,9 @@
 ## phpでイテレーターパターン
 https://www.ritolab.com/posts/116
 
+## phpでプロキシパターン 代理。
+https://www.ritolab.com/posts/142
+
 ## phpでアブストラクトファクトリーパターン
 記述ミスが後半あるが、わかりやすい
 https://www.ritolab.com/posts/127
