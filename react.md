@@ -41,49 +41,50 @@ https://github.dev/oukayuka/Riakuto-StartingReact-ja3.1
 
 ## ブラウザ履歴系の機能を使いたい場合はusehistory
 
-HTML5 の Hisotry API が提供する生の History オブジェクトでなく、
-React Router が独自に定義している同じ名前の history オブジェクト
-主な要素
-・length...... スタックされている履歴の数
-・action...... 直近に実行されたアクションの種類("PUSH","REPLACE","POP")
-・push(PATH) ...... 引数 PATH で指定したパスに移動するメソッド
-・replace(PATH) ...... 引数 PATH で指定したパスにリダイレクトするメソッド(現在いるページの 履歴は消える)
-・goBack()...... ひとつ前の履歴のページに戻るメソッド ・goForward()...... ひとつ先の履歴のページに進むメソッド 
-・go(N) ...... 引数 N で指定した番号の履歴に移動するメソッド
+HTML5 の Hisotry API が提供する生の History オブジェクトでなく、React Router が独自に定義している同じ名前の history オブジェクト<br>
+主な要素<br>
+・length...... スタックされている履歴の数<br>
+・action...... 直近に実行されたアクションの種類("PUSH","REPLACE","POP")<br>
+・push(PATH) ...... 引数 PATH で指定したパスに移動するメソッド<br>
+・replace(PATH) ...... 引数 PATH で指定したパスにリダイレクトするメソッド(現在いるページの 履歴は消える)<br>
+・goBack()...... ひとつ前の履歴のページに戻るメソッド ・goForward()...... ひとつ先の履歴のページに進むメソッド <br>
+・go(N) ...... 引数 N で指定した番号の履歴に移動するメソッド<br>
 
 
 ## routeのコンポーネント属性について
-routeのコンポーネント属性で呼ばれたコンポーネントのpropsには、
+routeのコンポーネント属性で呼ばれたコンポーネントのpropsには、<br>
 history、location、matchオブジェクトが格納されている。→だが、6系ではhistoryは廃止。
 
 ## useEffectとは
-そのコンポーネントが再レンダリングされるたびに呼ばされる。
+そのコンポーネントが再レンダリングされるたびに呼ばされる。<br>
 常に監視しているとメモリリークなど起きることもあるので、不要になったら購読解除する。<br>
 useeffect中でreturnすると、クリーンアップ関数を使って、そのuseeffectを使わないようにできる<br>
 参考：https://qiita.com/seira/items/e62890f11e91f6b9653f
 
 ## uselocationとは
-locationオブジェクトで渡される情報を捕まえる関数。
-locationオブジェクトは。。。
-https://exampleapp.com/user/patty?from=user-list#friends
-の場合、こんなの。(p-31)
-
+locationオブジェクトで渡される情報を捕まえる関数。<br>
+locationオブジェクトは。。。<br>
+https://exampleapp.com/user/patty?from=user-list#friends<br>
+の場合、こんなの。(p-31)<br>
+```
 {
 pathname: '/user/patty', search: '?from=user-list', hash: '#friends',
 state: {
 [secretKey]: '9qWV408Zyr', },
 key: '1j3qup', }
-uselocationで渡す依存配列にはこのkeyを使うと良い
+```
+uselocationで渡す依存配列にはこのkeyを使うと良い<br>
 
 
 ## useParamsとuseRouteMatchとは
-react routerが提供するmatchオブジェクトをハンドリングするためのapi
+react routerが提供するmatchオブジェクトをハンドリングするためのapi<br><br>
 
-useParams・・・urlパラメータだけを抽出する。
-useRouteMatch...matchオブジェクトを丸ごと取得。
-useRouteMatchからデータを取ろうとするとかなり冗長なので、useParamsを使うと楽なケースが多い。
-
-matchオブジェクトは、、、こんなの。
+useParams・・・urlパラメータだけを抽出する。<br>
+useRouteMatch...matchオブジェクトを丸ごと取得。<br>
+useRouteMatchからデータを取ろうとするとかなり冗長なので、useParamsを使うと楽なケースが多い。<br>
+<br>
+matchオブジェクトは、、、こんなの。<br>
+```
 {
 path: "/user/:userId", 
 url: "/user/patty", 
@@ -91,7 +92,7 @@ isExact: true,
 params: {
 userId: "patty", }
 }
-
+```
 
 ## react helmetについて
 どこからでもhtmlドキュメントヘッダを同的に上書きしてくれる。
@@ -99,26 +100,26 @@ userId: "patty", }
 
 ##５系と6系の違い
 
-1.Switchが廃止され、Routesが導入。
-<Switch> はマッチした <Route> があり次第、それ以降の評価をせず処理を抜ける。が、<Routes> では最後まで評価した上で、ベストマッチする <Route> にルーティングされる
-並び順によってマッチするものが変わってしまうので、注意が必要
+1.Switchが廃止され、Routesが導入。<br>
+<Switch> はマッチした <Route> があり次第、それ以降の評価をせず処理を抜ける。が、<Routes> では最後まで評価した上で、ベストマッチする <Route> にルーティングされる<br>
+並び順によってマッチするものが変わってしまうので、注意が必要<br>
 
-2.nest routeがかけるようになった。(りあくと！3-p47あたりがわかりやすい)
-  outletはnested routeの中のプレースホルダー。ネストされたマッチされたコンポーネントが出力される
+2.nest routeがかけるようになった。(りあくと！3-p47あたりがわかりやすい)<br>
+  outletはnested routeの中のプレースホルダー。ネストされたマッチされたコンポーネントが出力される<br>
   
-3.exactおよびstrict属性が廃止。
-  正規表現も使えず、末尾の*のみがマッチする。
+3.exactおよびstrict属性が廃止。<br>
+  正規表現も使えず、末尾の*のみがマッチする。<br>
   
 ## apiサーバーにpostする際、なぜか301がかえる
-  拡張機能のrest_client試した際に301がかえる→
-  https://teratail.com/questions/57999
-  が原因。
+  拡張機能のrest_client試した際に301がかえる→<br>
+  https://teratail.com/questions/57999<br>
+  が原因。URLの末尾に/が付いていたため。<br>
  
 ## Contextではデータを渡す側をProviderと呼びデータを受け取る側をConsumerと呼びます。
-この辺が参考になった。
+この辺が参考になった。<br>
 https://nishinatoshiharu.com/react-context-cases/
-  
-  保持した情報をキャッシュなど？で持つには
-  https://nobunobu1717.site/?p=2443
-  で次回やってみる
+  <br>
+  保持した情報をキャッシュなど？で持つには<br>
+  https://nobunobu1717.site/?p=2443<br>
+  で次回やってみる<br>
   
