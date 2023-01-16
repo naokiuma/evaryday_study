@@ -57,3 +57,26 @@ while True:
         break
     print(x)
 ```
+
+
+## 桁を指定してfloatの値を出す
+
+```
+print(f"{c:.5f}")
+ // または
+print("{:.5f}".format(c)) 
+//とかけば、cの変数の中身を、小数点5桁まで出すことができる。
+```
+
+## 実数を読み込むにはfloat
+```
+r = float(input())
+
+//複数の場合
+l = [float(x) for x in input().split()]
+//または
+l = list(map(float, input().split()))
+
+```
+
+
