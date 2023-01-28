@@ -1,3 +1,31 @@
+## ジェネリクスについて
+```
+# 変数
+const numbers:number[]=[1,2,3]
+という書き方もできるし、
+const numbers:Array<string> = ['one','two',three']
+という書き方もできる。
+
+# 関数の型宣言
+
+const toArray = <T>(num1:T,num2:T):T[] => [num1,num2];
+toArray(8,3) //[8,3]
+toArray('foo','bar') //['foo','bar']
+toArray(5,'bar') //エラー！
+
+//Tは型引数。これを引数で使ってね、という指定。num1,num2にTを指定しているので、三つ目はエラーになる
+//こんなふうに、データの型に束縛されないように抽象化して、コードの再利用性を向上させつつ、
+型安全を維持する手法を、ジェネリックプログラミングと呼ぶ
+
+//ちなみに、こんなふうに引数の数を可変長にできる。
+const toArray2 = <T>(...args:T[]):T[] => [...args];
+toArray2(1,2,3,4,5)
+
+※jsの場合はこんな感じ
+https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters
+
+```
+
 ## const TEST :VFC<Props> = (props) => 。。。におけるVFCの横の大文字のPropsとは何を表している？
 
 propsのtypeによる型定義。こんな感じで使える。
@@ -32,31 +60,3 @@ export const TopicForm:FC<{isActive:boolean}> = memo((props) => {
   ```
 <TopicForm isActive={true} />
 ```
-
-## 関数型プログラミングの各種関数
-```
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-console.log(arr.map((n) => n * 2)); // [ 2, 4, 6, 8, 10, 12, 14, 16, 18 ] 
-console.log(arr.filter((n) => n % 3 === 0)); // [ 3, 6, 9 ] 
-console.log(arr.find((n) => n > 4)); // 5 
-console.log(arr.findIndex((n) => n > 4)); // 4 
-console.log(arr.every((n) => n !== 0)); // true 
-console.log(arr.some((n) => n >= 10)); // false
-  
-//reduceとsort
-const arr = [1, 2, 3, 4, 5];
-console.log(arr.reduce((n, m) => n + m)); // 15
-console.log(arr.sort((n, m) => n > m ? -1 : 1)); // [ 5, 4, 3, 2, 1 ]
-
-
-```
-・map() …… 対象の配列の要素ひとつひとつを任意に加工した新しい配列を返す<br>
-・filter() …… 与えた条件に適合する要素だけを抽出した新しい配列を返す<br>
-・find() …… 与えた条件に適合した最初の要素を返す。見つからなかった場合は undefind を返す <br>
-・findIndex() …… 与えた条件に適合した最初の要素のインデックスを返す。見つからなかった場 合は -1 を返す <br><br>
-・every() ……「与えた条件をすべての要素が満たすか」を真偽値で返す<br>
-・some() ……「与えた条件をいずれかの要素が満たすか」を真偽値で返す<br>
-  
-  
-  
