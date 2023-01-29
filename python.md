@@ -18,7 +18,8 @@ print(a, b)           # World Hello　と出力される
  l = ["1", "2", "3"]       #　３つの文字列要素
 print(l[0] + l[1] + l[2]) # 123 （文字列として計算される）
 
-l = list(map(int, l)) #map関数により、intに変換したlistにする。 
+l = list(map(int, l)) #map関数により、intに変換したlistにする。 (ここでlは、あらかじめinput().split()で配列にされた変数)
+
 print(l[0] + l[1] + l[2]) # 6　（整数として計算される）
 
 # 基本はこれで受け取るのが良さそう。
