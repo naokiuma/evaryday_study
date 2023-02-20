@@ -1,5 +1,6 @@
 ## テストの参考
-https://www.webopixel.net/javascript/1777.html
+https://www.webopixel.net/javascript/1777.html<br>
+yarn run test
 
 ## jsxの中で&&で繋いでtrueなら返し、falseなら完全に無視する三項演算子的っぽい書き方
 https://qiita.com/horiy0125/items/fa07f5baa6028b9746ce
