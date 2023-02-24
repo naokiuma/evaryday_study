@@ -14,6 +14,16 @@ https://designpatternsphp.readthedocs.io/ja/latest/Creational/AbstractFactory/RE
 ## reactでsolid原則
 https://zenn.dev/koki_tech/articles/361bb8f2278764
 
+
+## lravelでの依存性の話。
+依存性の注入
+https://laraweb.net/surrounding/2001/
+依存性は、外から突っ込む。中でインスタンスを作ってしまうと、単体テストができない。
+
+依存性の注入の逆転
+https://laraweb.net/surrounding/2018/
+
+
 ## 依存関係の情報はこの辺読んでおけば概要は掴めるかも。
 
 https://speakerdeck.com/hiroki_hasegawa/yi-cun-guan-xi-toyi-cun-obuziekutozhu-ru
