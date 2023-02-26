@@ -43,6 +43,9 @@ exactは基本指定した方が良さそう。
 コードについてはこちらを参考。
 https://github.dev/oukayuka/Riakuto-StartingReact-ja3.1
 
+## react-routerでurl直うちすると白紙になる問題
+head内に<base href="/">を記述し、サーバーを「再起動」すればすおk
+
 ## ブラウザ履歴系の機能を使いたい場合はusehistory
 
 HTML5 の Hisotry API が提供する生の History オブジェクトでなく、React Router が独自に定義している同じ名前の history オブジェクト<br>
