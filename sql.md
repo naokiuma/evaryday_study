@@ -107,8 +107,13 @@ on p1.name <> p2.name;<br>
 バナナ　りんご<br>
 バナナ　みかん<br>
 
+## shopとshop_jobなど、二つのテーブル両方に存在しているお店があり。イレギュラーで、片方には存在していない場合に、それを洗い出すクエリ
+NOT EXISTSを使う<br>
+https://poko-everyday.com/sql%E3%81%A7%E7%89%87%E6%96%B9%E3%81%AE%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AB%E3%81%97%E3%81%8B%E5%AD%98%E5%9C%A8%E3%81%97%E3%81%AA%E3%81%84%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E6%8A%BD/
 
-## DB移行など、異なるdbのtbl_aとtbl_bのテーブルが同じか、比較するときに行えるsql（tbl_aとtbl_bの行数がまず同じであることを確認。例として両方3行の場合）
+
+
+## DB移行など、異なるdbのtbl_aとtbl_bのテーブルが全く同じか、比較するときに行えるsql（tbl_aとtbl_bの行数がまず同じであることを確認。例として両方3行の場合）
 select count(*) as row_cnt<br>
 from(select * from tbl_A <br>
      union<br>
@@ -160,7 +165,6 @@ childがnullのものを排除したい場合はwhereで指定する<br>
 
 ## codeignitor でjoin先をサブクエリ
 https://www.kabanoki.net/2015/
-
 
 ##　繰り返しフィールドを繰り返し解除した後の結合
 fromをshopにするなら、<br>
