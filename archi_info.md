@@ -33,3 +33,5 @@ https://speakerdeck.com/hiroki_hasegawa/domeinqu-dong-she-ji-toyi-cun-xing-ni-zh
 ## reactで試しているDDDのやつ。(mockサーバーもあり。)
 https://qiita.com/ttiger55/items/50d88e9dbf3039d7ab66<br>
 
+## reactにおけるアトミックデザインの切り分け例
+https://tech.leverages.jp/entry/2022/08/31/160743
