@@ -30,5 +30,6 @@ https://speakerdeck.com/hiroki_hasegawa/yi-cun-guan-xi-toyi-cun-obuziekutozhu-ru
 
 https://speakerdeck.com/hiroki_hasegawa/domeinqu-dong-she-ji-toyi-cun-xing-ni-zhuan-falseyuan-ze
 
-## reactで試しているやつ。(mockサーバーもあり。)
-https://qiita.com/ttiger55/items/50d88e9dbf3039d7ab66
+## reactで試しているDDDのやつ。(mockサーバーもあり。)
+https://qiita.com/ttiger55/items/50d88e9dbf3039d7ab66<br>
+
