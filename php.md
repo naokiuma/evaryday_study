@@ -1,5 +1,5 @@
 ## 関数色々
-array_column・・・配列の、第二引数で指定した値のみ返す。selectみたいなイメージ。
+array_column・・・配列の、第二引数で指定した値のみ返す。selectみたいなイメージ。<br>
 array_unique・・・重複した値を削除する。
 ```php
 array_unique(array_column($data['areas'], 'area_id')
@@ -13,7 +13,7 @@ array_unique(array_column($data['areas'], 'area_id')
             [area_mid_id] => 13
             [area_mid_name] => 東京
         )
-  [1] => Array
+        [1] => Array
         (
             [area_mid_id] => 13
             [area_mid_name] => 東京
