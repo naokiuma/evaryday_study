@@ -9,9 +9,15 @@ const numbers:number[]=[1,2,3]
 という書き方もできるし、
 const numbers:Array<string> = ['one','two',three']
 という書き方もできる。
+```
 
-# 関数の型宣言
+## as constとは
+オブジェクトや配列をconstで定義するとき、その中身もread onlyにする方法。<br>
+https://typescriptbook.jp/reference/values-types-variables/const-assertion
 
+## 関数の型宣言
+
+```
 const toArray = <T>(num1:T,num2:T):T[] => [num1,num2];
 toArray(8,3) //[8,3]
 toArray('foo','bar') //['foo','bar']
@@ -30,7 +36,7 @@ https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Functions/rest_pa
 
 ```
 
-## const TEST :VFC<Props> = (props) => 。。。におけるVFCの横の大文字のPropsとは何を表している？
+## const TEST :VFC"<Props>" = (props) => 。。。におけるVFCの横の大文字のPropsとは何を表している？
 
 propsのtypeによる型定義。こんな感じで使える。
 https://github.dev/oukayuka/Riakuto-StartingReact-ja3.1
