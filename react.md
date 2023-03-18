@@ -1,3 +1,30 @@
+## reactでfetchして、値が入るまでloadingする方法（よく使うのでサンプル。）
+
+```
+
+useEffect(() => {
+    getGame(game_id).then((data)=>{
+      set_game(data);
+      setIsLoading(false);
+        })
+    },[])
+    
+<div>
+    {isLoading ? (
+        <p>Loading...</p>
+    ) : (
+        <>
+            <span>
+                {data[0].name}
+            </span>
+        </>
+    )}
+</div>
+
+```
+
+
+
 ## react-routerのリダイレクト手順。
 v6以降はuseNavigateを使用。
 ```
