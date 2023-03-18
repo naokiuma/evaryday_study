@@ -1,3 +1,19 @@
+## react-routerのリダイレクト手順。
+v6以降はuseNavigateを使用。
+```
+import { useNavigate } from 'react-router-dom';
+
+function LoginPage() {
+  const navigate = useNavigate(); 
+  //ここでnavigateに置き換える必要がある。
+  //useNavigate()はReactコンポーネント内でのみ使用することがでため、
+  //関数コンポーネント内で直接useNavigate()を使用することはできません。
+
+  if (isLoggedIn) {
+    navigate('/dashboard');
+    
+```
+
 ## テストの参考
 https://www.webopixel.net/javascript/1777.html<br>
 yarn run test
