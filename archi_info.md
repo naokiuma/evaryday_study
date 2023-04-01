@@ -1,3 +1,6 @@
+## idはautoincrementすべき？メリデメについて話している記事
+https://zenn.dev/praha/articles/3c84e3818891c3
+
 ## phpでイテレーターパターン
 https://www.ritolab.com/posts/116
 
