@@ -13,6 +13,7 @@ show DATABASES
 
 //で確認
 ```
+参考：　https://www.i-ryo.com/entry/2020/08/02/191316
 
 # sql
 ## ウィンドウ関数
