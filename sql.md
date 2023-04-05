@@ -1,3 +1,19 @@
+# mamp 
+## mamp環境にターミナルでアクセスするには
+```
+cd /Applications/MAMP/Library/bin/
+
+//でmamp配下に入る
+
+./mysql -u root -p
+
+//でmysql起動。
+
+show DATABASES
+
+//で確認
+```
+
 # sql
 ## ウィンドウ関数
 
