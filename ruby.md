@@ -149,8 +149,22 @@ a[0].upcase!
 ["test","test","test"]
 #こうしないために、初期値はブロックで渡そう。下記のようにすれば、どれも異なるオブジェクトになる。
 Array.new(3){"default"}
+```
 
+# each_with_indexで、配列の要素を別々の要素として受け取る方法
+```
+sample = [
+[10,20],
+[30,40],
+[50,60]
 
+sample.each_with_index do |(a,b),i|
+ puts "A:#{a}, B:#{b},i:#{i}"
+end
 
+結果
+ A:10,B:20,i:0
+ A:30,B:40,i:1
+ A:50,B:60,i:2
 
 ```
