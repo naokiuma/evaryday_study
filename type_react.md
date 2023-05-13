@@ -1,3 +1,20 @@
+## ts基本の諸々参考url!忘れたらここを見よう
+https://zenn.dev/ogakuzuko/articles/react-typescript-for-beginner
+
+## tsでのtypeofは、変数から型を抽出する。
+jsでのtsとは少し違うので、注意。
+具体的には？
+```
+const point = { x: 135, y: 35 };
+type Point = typeof point;
+
+//上記の、Pointには、これが入る。
+type Point = {
+    x: number;
+    y: number;
+}
+```
+
 ## typescriptはクラス定義すると、二つの宣言が同時に実行される。
 クラスインスタンスのインターフェース、とコンストラクタ関数
 
@@ -36,7 +53,11 @@ https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Functions/rest_pa
 
 ```
 
-## const TEST :VFC"<Props>" = (props) => 。。。におけるVFCの横の大文字のPropsとは何を表している？
+## VFCの横の大文字のPropsとは何を表している？
+具体的には、こういうコード
+```
+const TEST :VFC"<Props>" = (props) => ...後略
+```
 
 propsのtypeによる型定義。こんな感じで使える。
 https://github.dev/oukayuka/Riakuto-StartingReact-ja3.1
