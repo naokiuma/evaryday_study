@@ -1,3 +1,6 @@
+## ifの基本
+https://chaika.hatenablog.com/entry/2019/05/16/083000
+
 ## reactでfetchして、値が入るまでloadingする方法（よく使うのでサンプル。）
 
 ```
