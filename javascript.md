@@ -1,3 +1,31 @@
+## レストパラメータ
+```
+const add = (...numbers:number[]) =>{
+  let result = 0;
+
+  //reduceは各要素を足し算するのに便利。
+  //初期値が0、curResultは現在の数字、curValueは現在の要素
+  return numbers.reduce((curResult,curValue) => {
+    return curResult + curValue;
+  },0);
+};
+
+
+console.log(add(5,10,20,3))
+
+const result = add(5,10,20,3)
+結果は、38!
+```
+
+## スプレッド演算子
+```
+test = ['rice','pan']
+test2 = ['takoyaki']
+
+test2.push(...test)
+//とかけば、testの中身が展開されて、それぞれpushされる
+```
+
 ## jsで配列内のオブジェクトも見たい時
 ```
 console.dir(変数,{depth: null})
