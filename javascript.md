@@ -1,11 +1,10 @@
-## jsのclassでは、コンストラクタで明示的に引数を書けば、
-this.name...とかしなくても良い。
+## jsのclassでは、コンストラクタで明示的に引数を書けば、this.name...とかしなくても良い。
 ```
 class Department {
 	id:string
 	name:string
   // ↑これとか、コンストラクタの中でのthis.id。。。とかはがめんどくさいので、、、
-  ↓こう書く！そうすればクラスのプロパティ変数にすることができる。
+  // ↓こう書く！そうすればクラスのプロパティ変数にすることができる。
 
 	constructor(private id:string,public n:string){
 		this.id = id //これも要らなくなる１
