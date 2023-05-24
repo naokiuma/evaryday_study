@@ -1,3 +1,25 @@
+## jsのclassでは、コンストラクタで明示的に引数を書けば、
+this.name...とかしなくても良い。
+```
+class Department {
+	id:string
+	name:string
+  // ↑これとか、コンストラクタの中でのthis.id。。。とかはがめんどくさいので、、、↓こう書く！そうすればクラスのプロパティ変数にすることができる。
+
+	constructor(private id:string,public n:string){
+		this.id = id //これも要らなくなる１
+		this.name = n 
+	}
+
+}
+
+let salse = new Department('1','sales');
+```
+
+
+## javascriptのclassには、publicとprivateはない。
+ただ、tsはその辺りを判断してくれるので、クリーンなコードを書くことができる。
+
 ## レストパラメータ
 ```
 const add = (...numbers:number[]) =>{
