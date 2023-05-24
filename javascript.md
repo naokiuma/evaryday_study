@@ -4,7 +4,8 @@ this.name...とかしなくても良い。
 class Department {
 	id:string
 	name:string
-  // ↑これとか、コンストラクタの中でのthis.id。。。とかはがめんどくさいので、、、↓こう書く！そうすればクラスのプロパティ変数にすることができる。
+  // ↑これとか、コンストラクタの中でのthis.id。。。とかはがめんどくさいので、、、
+  ↓こう書く！そうすればクラスのプロパティ変数にすることができる。
 
 	constructor(private id:string,public n:string){
 		this.id = id //これも要らなくなる１
