@@ -1,3 +1,51 @@
+## シングルトンと、privateコンストラクタとは？
+シングルトンパターンとは・・・一つのオブジェクトしか存在できないようにする。
+例えば、会計部門は会社には一つしかないので、一つだけにしたい。
+
+コンストラクタは、privateにする。
+そしてそのinstaceもprivate、staticなものにする。
+
+```
+class AccountingDepartment {
+	id:string
+	private static instance:AccountingDepartment //instanceは自分自身なので、型は
+	
+	private constructor(){
+	
+	
+	static getInstance(){
+		if(this.instatce){ //ここでのthisは、class自体を指す。なので、staticなプロパティ、instanceにアクセスできる。
+			return thiis.instance;
+		}
+		//もしスタティックがなければ、作り、返す。
+		this.instance = new AccountingDepartment
+		return this.instance;
+	}
+}
+
+//作り方
+const accounting = AccountingDepartment.getInstance();
+```
+
+
+
+## 抽象クラスについて
+関数などのオーバーライドを強制させる機能は。。。抽象。
+抽象クラスはメソッドの実装はしない。型などだけ設定する。
+
+```
+abstract 関数名():void
+//実装は行わないこと。
+```
+抽象クラスはnewでインスタンスを作ることはできないので注意。
+
+
+## 継承などについて
+・extensで継承したサブクラスには、super を実行することで、親クラスのコンストラクタを異実行する
+・アクセス修飾子の「private」は、そのクラスからのみアクセスできる。protectedは、そのクラスと、その子どもクラスからのみアクセスできる。
+・get、setは、private変数でもアクセスができるもの。
+・statilメソッドを作れば、インスタンス化しなくてもメソッドを使うことができる。逆に、インスタンス化したオブジェクトからかはアクセスできない。
+
 ## jsのclassでは、コンストラクタで明示的に引数を書けば、this.name...とかしなくても良い。
 ```
 class Department {
@@ -14,6 +62,7 @@ class Department {
 }
 
 let salse = new Department('1','sales');
+//セクション5の小テスト４あたりを参考に。
 ```
 
 
