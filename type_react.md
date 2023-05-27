@@ -1,6 +1,20 @@
 ## ts基本の諸々参考url!忘れたらここを見よう
 https://zenn.dev/ogakuzuko/articles/react-typescript-for-beginner
 
+
+## typeやinterfaceを使う理由
+例えば、greetableというinterfaceがある。
+これには、greet()というメソッドを型として持たせる。
+interfaceは、複数のクラスに設定できる。
+例えば、複数のクラスにて「greet()という関数を持たせる」ことを担保できる。
+
+さらに、interfaseは別のinterfaceを継承することもできる。
+※typeでもできるけど、ちょっとややこしい。
+https://qiita.com/tkrkt/items/d01b96363e58a7df830e
+
+また、この継承時、1つのinterfaceに複数のinterfaceを継承することもできる。
+
+
 ## tsでのtypeofは、変数から型を抽出する。
 jsでのtsとは少し違うので、注意。
 具体的には？
@@ -14,6 +28,9 @@ type Point = {
     y: number;
 }
 ```
+
+## javascriptにはinterfaceは存在しない
+interfaceは出力されない。開発中のもの。
 
 ## typescriptはクラス定義すると、二つの宣言が同時に実行される。
 クラスインスタンスのインターフェース、とコンストラクタ関数
