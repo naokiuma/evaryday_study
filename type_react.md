@@ -9,7 +9,8 @@ interfaceは、複数のクラスに設定できる。
 例えば、複数のクラスにて「greet()という関数を持たせる」ことを担保できる。
 
 さらに、interfaseは別のinterfaceを継承することもできる。
-※typeでもできるけど、ちょっとややこしい。
+※typeでもできるけど、ちょっとややこしい。<br>
+typeとinterfaceの違い<br>
 https://qiita.com/tkrkt/items/d01b96363e58a7df830e
 
 また、この継承時、1つのinterfaceに複数のinterfaceを継承することもできる。
