@@ -2,6 +2,8 @@
 https://zenn.dev/ogakuzuko/articles/react-typescript-for-beginner
 
 ## 交差型や型ガードについて
+こちらに詳細。<br>
+https://github.com/naokiuma/understanding_ts/blob/master/src/advanced_type.ts
 
 ## typeやinterfaceを使う理由
 例えば、greetableというinterfaceがある。
