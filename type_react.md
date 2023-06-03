@@ -1,6 +1,11 @@
 ## ts基本の諸々参考url!忘れたらここを見よう
 https://zenn.dev/ogakuzuko/articles/react-typescript-for-beginner
 
+
+## デコレータについて
+こちらに詳細<br>
+https://github.com/naokiuma/understanding_ts/blob/master/src/decorator.ts
+
 ## ジェネリクスについて
 こちらに詳細<br>
 https://github.com/naokiuma/understanding_ts/blob/master/src/generics.ts
