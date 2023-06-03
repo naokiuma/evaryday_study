@@ -3,7 +3,38 @@ https://zenn.dev/ogakuzuko/articles/react-typescript-for-beginner
 
 
 ## デコレータについて
-こちらに詳細<br>
+
+デコレータとは何か？まず。tsconfgiをts6にして、experimentalDecoratorsをtrueに。<br>
+一般的にデコレータはclassにつけるもの<br>
+デコレータはただの関数。その関数を、特定の方法でクラスに適用するということ。<br><br>
+
+◼️基本情報<br>
+デコレータは、2つ以上を設定することができる。<br>
+なお、デコレーター内の関数の実行順序は、下から順に実行される。<br>
+ロガーファクトリー自体は普通に上から順に実行される。<br><br>
+
+◼️デコレーターを追加できる場所<br>
+デコレーターを利用するには、classが必要<br>
+classの中で設定で消える箇所が複数ある。<br>
+クラスの定義上。<br>
+コンストラクタ関数の上。<br>
+アクセサの上。<br>
+メソッドの上。<br><br>
+
+◼️実行タイミング<br>
+クラスをインスタン化した時に作られるわけではない。<br>
+クラスが「定義された時に実行される。」<br><br>
+
+◼️クラスデコレーターやメソッドデコレータは、値を返すことができる。<br>
+かなりややこしいので、113をよく見ること！<br><br>
+
+◼️メソッドデコレーターはPropertyDescriptorの設定を値として返すことができる<br>
+PropertyDescriptor　とは？オブジェクトのプロパティのメタ属性でデータアクセスに関する取り決めを保持しています。<br>
+https://qiita.com/hosomichi/items/db5c501272b622fdd848#%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%82%BF%E3%81%AE%E3%83%A1%E3%82%BF%E5%B1%9E%E6%80%A7<br>
+あたりを参考。<br><br>
+デコレータでバリデートもできる。116~118<br><br>
+
+こちらにコードのより詳細<br>
 https://github.com/naokiuma/understanding_ts/blob/master/src/decorator.ts
 
 ## ジェネリクスについて
