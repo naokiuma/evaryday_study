@@ -80,7 +80,7 @@ interfaceは出力されない。開発中のもの。
 クラスインスタンスのインターフェース、とコンストラクタ関数
 
 
-## 関数の定義について
+## 関数の型定義について
 ```
 type IsPositiveFunc = (arg: number) => boolean;
 
@@ -88,8 +88,8 @@ type IsPositiveFunc = (arg: number) => boolean;
 
 また、interfaceの場合、
 
-interface IsPositiveFunc ={
-    number:booleran
+interface IsPositiveFunc {
+  (arg: number): boolean;
 }
 
 ともかける
@@ -135,6 +135,14 @@ toArray2(1,2,3,4,5)
 https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters
 
 ```
+
+次の型Partial<T>はTのプロパティを全てオプショナルにした型です。この型は便利なのでTypeScriptの標準ライブラリに定義されており、自分で定義しなくても使うことができます。全てのプロパティをreadonlyにするReadonly<T>もあります。
+
+```
+type Partial<T> = {[P in keyof T]?: T[P]};
+```
+
+
 
 ## VFCの横の大文字のPropsとは何を表している？
 具体的には、こういうコード
