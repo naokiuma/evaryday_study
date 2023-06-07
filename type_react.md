@@ -136,6 +136,7 @@ https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Functions/rest_pa
 
 ```
 
+## Partialについて
 次の型Partial<T>はTのプロパティを全てオプショナルにした型です。この型は便利なのでTypeScriptの標準ライブラリに定義されており、自分で定義しなくても使うことができます。全てのプロパティをreadonlyにするReadonly<T>もあります。
 
 ```
