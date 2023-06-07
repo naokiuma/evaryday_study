@@ -80,6 +80,21 @@ interfaceは出力されない。開発中のもの。
 クラスインスタンスのインターフェース、とコンストラクタ関数
 
 
+## 関数の定義について
+```
+type IsPositiveFunc = (arg: number) => boolean;
+
+//関数の型はこのように(引数名: 型) => 返り値の型という形で書くことができます。型システム上、型にかかれている引数名（arg）に意味はありません。
+
+また、interfaceの場合、
+
+interface IsPositiveFunc ={
+    number:booleran
+}
+
+ともかける
+```
+
 ## ジェネリクスについて
 ```
 # 変数
@@ -88,6 +103,13 @@ const numbers:number[]=[1,2,3]
 const numbers:Array<string> = ['one','two',three']
 という書き方もできる。
 ```
+
+
+## keyofは
+そのオブジェクトのkeyを全て取得する
+
+## neverはどんなときに使う？
+絶対に変数をセットしない。→ switchの最後で誤って数字を入れたりしないように。（リアクト!のts序盤より）
 
 ## as constとは
 オブジェクトや配列をconstで定義するとき、その中身もread onlyにする方法。<br>
