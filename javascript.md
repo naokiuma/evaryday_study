@@ -20,6 +20,7 @@ class AccountingDepartment {
 	private static instance:AccountingDepartment //instanceは自分自身なので、型は
 	
 	private constructor(){
+	}
 	
 	
 	static getInstance(){
