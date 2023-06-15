@@ -2,6 +2,8 @@
 https://zenn.dev/ogakuzuko/articles/react-typescript-for-beginner
 
 
+
+
 ## デコレータについて
 
 デコレータとは何か？まず。tsconfgiをts6にして、experimentalDecoratorsをtrueに。<br>
