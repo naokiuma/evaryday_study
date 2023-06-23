@@ -1,8 +1,14 @@
 ## ts基本の諸々参考url!忘れたらここを見よう
 https://zenn.dev/ogakuzuko/articles/react-typescript-for-beginner
 
+## declareキーワードにより、変数を宣言すると
+tsに対して、この変数は存在しているからチェックは不要だと伝えることができる。
 
-
+## サードパーティライブラリのts宣言ファイル
+https://github.com/DefinitelyTyped/DefinitelyTyped
+<br>
+大量のjsファイルがtsになったものが配置されている。ライブラリを使いたい場合はここに存在するかをみよう。<br>
+xxx.d.ts など、declaition（宣言）されたファイルをインストールしておけヴァ、使える。devのみのインストールでもok
 
 ## デコレータについて
 
