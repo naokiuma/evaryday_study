@@ -115,6 +115,32 @@ interface IsPositiveFunc {
 ```
 
 ## ジェネリクスについて
+
+[React]Generic型のコンポーネントを作る
+
+code:tsx
+ type Props<T> = {
+   data: T
+ }
+ 
+ // 定義元
+ const Smaple = <T extends {}>(props: Props<T>) => {}
+ 
+ // 呼び出し側
+ const APP = () => {
+   return (
+     <Sample<string> data="文字">
+     <Sample<number> data="数値">
+   )
+ }
+ 
+`<T extends {}>`
+arrowでコンポーネントを定義する場合必要。
+TypeScriptの型であると判別させるために必要。オブジェクトならなんでもOKとしている。
+
+ジェネリクスを使った場合`FC`は使えない。
+
+
 ```
 # 変数
 const numbers:number[]=[1,2,3]
