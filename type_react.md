@@ -1,3 +1,9 @@
+## コンポーネントへの引数の渡し方
+こうすることで、オブジェクトそのものを渡すことができる。
+```
+<GameCard key={each_game.id} {...each_game} />
+```
+
 ## ts基本の諸々参考url!忘れたらここを見よう
 https://zenn.dev/ogakuzuko/articles/react-typescript-for-beginner
 
@@ -137,8 +143,6 @@ code:tsx
 `<T extends {}>`
 arrowでコンポーネントを定義する場合必要。
 TypeScriptの型であると判別させるために必要。オブジェクトならなんでもOKとしている。
-
-ジェネリクスを使った場合`FC`は使えない。
 
 
 ```
