@@ -2,6 +2,10 @@
 こうすることで、オブジェクトそのものを渡すことができる。
 ```
 <GameCard key={each_game.id} {...each_game} />
+
+//こうではないので注意
+// <GameCard key={each_game.id} props={...each_game}/>
+
 ```
 
 ## ts基本の諸々参考url!忘れたらここを見よう
