@@ -1,3 +1,8 @@
+## テストの話
+カスタムフックをテストしたい場合<br>
+具体的には、カスタムフック内のクエリをテストしたい場合。
+https://zenn.dev/bom_shibuya/articles/5c3ae7745c5e94#
+
 ## メモ系の話
 useCallback・・・コールバック関数をメモ化する。
 react.memo・・・子コンポーネントをメモ化する。useCallbackで関数をメモ化し、その関数を子供に渡せば効果を発揮する。<br><br>
