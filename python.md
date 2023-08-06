@@ -81,7 +81,7 @@ l = list(map(float, input().split()))
 ```
 
 
-パイソンの独特基礎内容
+# パイソンの独特基礎内容
 
 # 関数の中などでglobal変数を利用するには
 global宣言をする
