@@ -35,7 +35,12 @@ htmlファイルに書かれていたり、jsファイルの中にだけある�
 declare var GLOBAL:string
 ```
 などをtsの中で書いておく。tsに存在するよと伝えておくことで、エラーを出さないようにできる。<br>
-ただ、これだとtsの恩恵を受けられないので、typesファイルがあればそれをインストールしよう（例えばgoogle mapの表示をtsで使う場合、typsのgoogleを検索して利用しよう）（udemyのgoogleマップ講座参考）
+ただ、これだとtsの恩恵を受けられないので、typesファイルがあればそれをインストールしよう（例えばgoogle mapの表示をtsで使う場合、typsのgoogleを検索して利用しよう）（udemyのgoogleマップ講座参考）<br>
+
+関数や変数を中身なしに宣言することもできる。
+```
+declare function foo(arg: number): number;
+```
 
 ## サードパーティライブラリのts宣言ファイル
 https://github.com/DefinitelyTyped/DefinitelyTyped
