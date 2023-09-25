@@ -21,7 +21,7 @@ less -N  折り返しをしない。<br>
 less -NS 上記両方のオプション。<br>
 
 ■grepについて<br>
-grep "500" access.log とか、zgrep "404" ファイル名とか。<br>
+grep "500" access.log とか、zgrep "404" ファイル名とか。その文字列が存在しない場合はノーリアクションなので注意！<br>
 通常ファイルを試す場合　grep ‘探す文字列’ファイル名<br>
 Zipファイルを試す場合　zgrep  ‘探す文字列’ファイル名<br>
 
