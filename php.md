@@ -1,4 +1,14 @@
 ## 関数色々
+sprintf の中でsprintfをするより、ゼロ埋めしよう。<br>
+https://gray-code.com/php/fill-numbers-with-zeros/
+
+```
+//※011桁で埋める
+sprintf("/items/%s/",sprintf("%011d", $item_id)
+//ではなく、
+sprintf("/items/%011d/",$item_id)
+```
+
 array_column・・・配列の、第二引数で指定した値のみ返す。selectみたいなイメージ。<br>
 array_unique・・・重複した値を削除する。
 ```php
