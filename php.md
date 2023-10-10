@@ -1,3 +1,11 @@
+## 判定について
+もし $hoge 変数には0か１が入りうる場合、それに0か1が入っているかを判定するときに
+
+```
+if($hoge){}
+```
+で判定すると、
+
 ## 関数色々
 sprintf の中でsprintfをするより、ゼロ埋めしよう。<br>
 https://gray-code.com/php/fill-numbers-with-zeros/
