@@ -1,3 +1,14 @@
+## タプル（型情報をセットしている配列みたいなもの）など、Mapped Types が使えない場合はどう型にアクセスする？
+Indexed Access Types を利用して T[number] という型制約を利用。タプルに対して T[number] とアクセスすると配列から型を取得できる。
+
+```
+const array = ['apple', 'banana', 'strawberry'] as const
+type Arr = typeof array // ['apple', 'banana', 'strawberry']
+type Fruits = Arr[number] // "apple" | "banana" | "strawberry"
+```
+
+
+
 ## テストの話
 カスタムフックをテストしたい場合<br>
 具体的には、カスタムフック内のクエリをテストしたい場合。
