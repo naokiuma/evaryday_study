@@ -1,6 +1,6 @@
 ## 環境変数系
 macアップデートしてphpが消えた時の話（基本アップデートすると消える）。下記の2つの記事がわかりやすい<br>
-zashcを触った後はsourceを適用する必要があるので注意！
+zashcを触った後はsourceを適用する必要があるので注意！<br>
 https://www.stub-create.com/blog/php/mamp-brew.html<br>
 https://tech.amefure.com/php-homebrew#google_vignette<br>
 <br>
