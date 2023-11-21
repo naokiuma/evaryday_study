@@ -7,6 +7,17 @@ https://tech.amefure.com/php-homebrew#google_vignette<br>
 この二つの違いは？<br>
 https://kanasys.com/tech/803#index1-0
 
+## プリフライトリクエストを起こす条件
+ブラウザが自動でoptionsとして送ってくれる。<br>
+例としてjsのfetchの場合、カスタマイズヘッダーを追加した場合、自動で送ってくれた。(firefoxの場合)<br>
+下記のx-access-tokenのつけ外しでプリフライトリクエストの有無が変わりました。
+
+```
+headers: {
+  'x-access-token':xxxx-xxxx-xxxx,
+  'Content-Type': 'application/json'
+}
+```
 
 ## サーバーキャッシュが強い場合の挙動について
 
