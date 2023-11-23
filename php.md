@@ -1,3 +1,7 @@
+## PHP Docsの書き方
+arrayのパラメータを渡したい場合、下記のstored_。。。ファンクションを参考に。
+https://github.com/ionixeternal/Codeigniter-3/blob/main/system/database/drivers/oci8/oci8_driver.php
+
 ## 判定について
 もし $hoge 変数には0か１が入りうる場合、それに0か1が入っているかを判定するときに
 
