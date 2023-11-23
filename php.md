@@ -1,5 +1,5 @@
 ## PHP Docsの書き方
-arrayのパラメータを渡したい場合、下記のstored_。。。ファンクションを参考に。
+arrayのパラメータを渡したい場合、下記のstored_。。。ファンクションを参考に。<br>
 https://github.com/ionixeternal/Codeigniter-3/blob/main/system/database/drivers/oci8/oci8_driver.php
 
 ## 判定について
