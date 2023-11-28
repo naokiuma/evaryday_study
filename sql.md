@@ -1,4 +1,35 @@
-##
+## navicatで見れる実行計画　と　N+1問題について
+テキトーにselectし、profileを見ると、下記のような情報が見れる。
+
+opening tables 
+preparing 準備
+executeing 実行
+
+とか。
+
+例題：ループで一つ一つ詰め込むとN+1問題が発生するので、一つのクエリにまとめてしまってはいいのでは？でもどっちの方がいいのか迷う。。。ようなとき。<br>
+一つのクエリでも、例えば別テーブルから紐づくshop_idの数を取るとかしている場合→<br>
+例えば、shopテーブルとshop_memberテーブルがあり、shopをfrom、ひもづくshop_memberの数を取りたい！とき。
+
+```sql
+-- これをセレクトに追加
+$this->db->select('(SELECT COUNT(*) FROM shop_member WHERE shop_member.shop_id = shop.shop_id AND shop_member.is_active = 1) AS member_count');
+
+--　または、一旦データとった後、ループで一つ一つ下記を走らせる。
+-- ループ処理開始
+$this->db->from('shop_member');
+$this->db->where('shop_member.is_active', 1);
+$this->db->where('shop_review.shop_id', $shop_id);
+$list[$key]['shop_member_count'] = $this->db->count_all_results();
+-- ループ処理終了
+
+```
+
+どっちがいいのか？というときに、「後者の方がn+1が起こるからダメ」と画一的に考えないこと。<br>
+前者でも、結局shop_member.shop_id = shop.shop_idのところで、n+1に近いことをしている。<br>
+前述のプロファイルで、executeingで実行しているが、そのまえの準備で時間がかかっているなら、結局のところn+1をクエリの中でやっているに過ぎない。<br>
+excutingの時間、準備にかかる時間などを見て、prepareingが増えているならn+1の対策でまとめても効果がないケースもある。さまざまな条件からケースバイケースで考えること
+
 
 ## join時に条件指定するのと、join後にwhereで条件指定するのはどちらが早い？
 基本的には結果も実行計画も同じ。
