@@ -1,11 +1,21 @@
-## navicatで見れる実行計画　と　N+1問題について
+## SQLで見れるプロファイル　と　N+1問題について
 テキトーにselectし、profileを見ると、下記のような情報が見れる。
 
 opening tables 
 preparing 準備
 executeing 実行
 
-とか。
+とか。<br>
+navicatならば検索後に結果の横の「profile」。<br>
+sqlで見るなら、
+
+```
+set profiling = 1;
+クエリ
+show profile;
+```
+
+
 
 例題：ループで一つ一つ詰め込むとN+1問題が発生するので、一つのクエリにまとめてしまってはいいのでは？でもどっちの方がいいのか迷う。。。ようなとき。<br>
 一つのクエリでも、例えば別テーブルから紐づくshop_idの数を取るとかしている場合→<br>
