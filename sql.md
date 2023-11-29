@@ -9,7 +9,7 @@ executeing 実行
 navicatならば検索後に結果の横の「profile」。<br>
 sqlで見るなら、
 
-```
+```sql
 set profiling = 1;
 クエリ
 show profile;
