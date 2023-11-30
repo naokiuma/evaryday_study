@@ -1,3 +1,23 @@
+## SPFレコードの調べ方
+whoisサイトで調べる方法<br>
+https://tamago.temonalab.com/support/manual/706
+<br><br>
+ターミナルで調べる方法(example.comを判定する場合)
+```
+nslookup -type=TXT example.com
+```
+example_A.jp	text = "v=spf1 a:example_B.jp include:_spf.google.com mx ~all"
+となっていたら、以下のことがわかる<br><br>
+    v=spf1: SPFバージョン1を指定しています。<br>
+    a:example_B.jp: ドメイン example_B.jp のAレコード(IPアドレス)を参照して送信元を認証します。<br>
+    include:_spf.google.com: _spf.google.com のSPFレコードを参照して、Googleのメールサーバーが許可された送信元かを確認します。<br>
+    mx: メールを送信する際に、ドメインのMXレコードにリストされているメールサーバーから送信されることを許可します。<br>
+    ~all: SPFの設定に合致しない場合、メールを受け取る側のサーバーはメールを受け入れるが、ソフトフェイルとしてマークします。<br><br>
+
+つまり、このSPFレコードは example_A.jp ドメインから送信されたメールが、example_B.jp のドメインを経由することが許可されており、またGoogleのメールサーバーからの送信も許可されていることを示しています。
+<br>
+
+
 ## 環境変数系
 macアップデートしてphpが消えた時の話（基本アップデートすると消える）。下記の2つの記事がわかりやすい<br>
 zashcを触った後はsourceを適用する必要があるので注意！<br>
