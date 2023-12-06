@@ -1,3 +1,9 @@
+## 実行計画　'Using where; Using join buffer (Block Nested Loop)'の解決方法<br>
+https://ja.stackoverflow.com/questions/85258/using-where-using-join-buffer-block-nested-loop%e3%81%ae%e8%a7%a3%e6%b1%ba%e6%96%b9%e6%b3%95<br><br>
+
+nested loopについてわかりやすい記事<br>
+https://dev.mysql.com/doc/refman/8.0/ja/nested-loop-joins.html<br>
+
 ## SQLで見れるプロファイル　と　N+1問題について
 テキトーにselectし、profileを見ると、下記のような情報が見れる。
 
