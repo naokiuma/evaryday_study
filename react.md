@@ -118,16 +118,56 @@ history、location、matchオブジェクトが格納されている。→だが
 useeffect中でreturnすると、クリーンアップ関数を使って、そのuseeffectを使わないようにできる<br>
 参考：https://qiita.com/seira/items/e62890f11e91f6b9653f
 
-## usecallbakとは(使い所)
+
+## React.memo　コンポーネントをメモ化する。<br>
+以下、メモ系はこの記事を参考にした。https://qiita.com/soarflat/items/b9d3d17b8ab1f5dbfed2#usememo
+
+```
+//propsが更新されるまで、このコンポーネントは再更新されない。
+const Hello = React.memo(props => {
+  return <h1>Hello {props.name}</h1>;
+});
+```
+
+## useCallbak react.memoを使ったコンポーネントに渡す「関数」に使う
 アロー関数でかいた関数は、reactの中で新しい関数として認識される。<br>
-なので、propsで子供にアロー関数を渡した場合、渡す先の子供をmemo化していても、毎回描写されてしまう。
-それを抑えるために、関数自体をusecallbackで包む。（第二引数は監視対象。これが変わると再描写される。）
+なので、propsで子供にアロー関数を渡した場合、渡す先の子供をReact。memo化していても、毎回描写されてしまう。<br>
+それを抑えるために、関数自体をusecallbackで包む。（第二引数は監視対象。これが変わると再描写される。）<br>
+
+React.memoでメモ化をしていないコンポーネントにuseCallbackでメモ化をしたコールバック関数を渡す<br>
+useCallbackでメモ化したコールバック関数を、それを生成したコンポーネント自身で利用する<br>
 
 ```
-  const apple = useCallback(() => console.log("りんご！"), []);
+import React, { useState, useCallback } from "react";
+
+const Child = React.memo(props => {
+  console.log("render Child");
+  return <button onClick={props.handleClick}>Child</button>;
+});
+
+export default function App() {
+  console.log("render App");
+
+  const [count, setCount] = useState(0);
+  // 関数をメモ化すれば、新しい handleClick と前回の handleClick は
+  // 等価になる。そのため、Child コンポーネントは再レンダリングされない。
+  const handleClick = useCallback(() => {
+    console.log("click");
+  }, []);
+
+  return (
+    <>
+      <p>Counter: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment count</button>
+      <Child handleClick={handleClick} />
+    </>
+  );
+}
 ```
 
-
+## useMemo　メモ化された値を返すフック。
+値に対して使う、と考えると良さそう。
+useMemo(() => 値を計算するロジック, 依存配列);
 
 ## uselocationとは
 locationオブジェクトで渡される情報を捕まえる関数。<br>
