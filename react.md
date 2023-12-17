@@ -1,3 +1,12 @@
+##  99%のケースで、取得したデータは「そのまま state にぶち込む」のが正解です。
+<br>
+react.dev には次のように書いてあります<br>
+既存の props または state から何かを計算できる場合は、それを state に入れないでください。<br>
+この説明以上に明快な説明は、おそらく他のどこにもないと思います。<br>
+React の黄金のルールの一つです。<br>
+https://zenn.dev/t_keshi/books/you-and-cleaner-react/viewer/inherited-proliferated-state
+
+
 ## contextについて
 プロバイダーで指定したvalueを1コンポーネントで二つ以上設定している場合、どっちか一つが更新されるだけで、この二つを使ってるコンポーネント全てが再レンダリングされる。<br>
 ので、それを抑えたい場合はプロバイダー自体を二つとかに分けるテクがある。
@@ -168,6 +177,12 @@ export default function App() {
 ## useMemo　メモ化された値を返すフック。
 値に対して使う、と考えると良さそう。
 useMemo(() => 値を計算するロジック, 依存配列);
+
+## 計算結果をキャッシュする場合は、useeffectではなくusememoを使おう。
+https://zenn.dev/t_keshi/books/you-and-cleaner-react/viewer/inherited-scattered-effect<br>
+また、useEffect に渡した関数は、レンダリング後に実行されます。<br>
+レンダリングライフサイクルから脱出する必要がないときに useEffect は不要です。
+
 
 ## uselocationとは
 locationオブジェクトで渡される情報を捕まえる関数。<br>
