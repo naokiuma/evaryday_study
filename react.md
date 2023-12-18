@@ -127,6 +127,10 @@ history、location、matchオブジェクトが格納されている。→だが
 useeffect中でreturnすると、クリーンアップ関数を使って、そのuseeffectを使わないようにできる<br>
 参考：https://qiita.com/seira/items/e62890f11e91f6b9653f
 
+<br>
+useEffect は コンポーネントの外側と内側を同期させる目的で使う。シンプルに最初にやる、という考え方はしないようにしよう。<br>
+https://zenn.dev/t_keshi/books/you-and-cleaner-react/viewer/inherited-scattered-effect
+
 
 ## React.memo　コンポーネントをメモ化する。<br>
 以下、メモ系はこの記事を参考にした。https://qiita.com/soarflat/items/b9d3d17b8ab1f5dbfed2#usememo
