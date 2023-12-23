@@ -150,6 +150,8 @@ const Hello = React.memo(props => {
 以下の2点では効果がないので注意！
 React.memoでメモ化をしていないコンポーネントにuseCallbackでメモ化をしたコールバック関数を渡す<br>
 useCallbackでメモ化したコールバック関数を、それを生成したコンポーネント自身で利用する<br>
+12/24追加↑この注意点本当？そんなことなさそう。。　https://zenn.dev/t_keshi/books/you-and-cleaner-react/viewer/cremation-dependence-array
+
 
 ```
 import React, { useState, useCallback } from "react";
