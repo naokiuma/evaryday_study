@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>typescript関連</title>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module">
+	import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+		axios.get('../typescript.md')
+        	.then(response => document.querySelector('#content').innerHTML = marked(response.data));
+    </script>
+  </body>
+</html>

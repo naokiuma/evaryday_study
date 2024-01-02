@@ -1,8 +1,0 @@
-## ダイナミックスライドバー
-wp管理画面にウィジェット登録→<br>
-その名前をfunctions.phpで　register_sidebar　で登録します。→<br>
-出力するところでは　dynamic_sidebar(登録した名前)と書きます。
-こうすれば、管理画面で、そのウィジェットの内容を書き換えられます。
-
-
-なお、ウィジェットの囲みタグにtextwidget custom-html-widget が追加される
