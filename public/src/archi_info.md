@@ -1,6 +1,3 @@
-![untold](https://github.com/naokiuma/evaryday_study/assets/55546727/3139f1a3-37a9-4ab3-a69b-10356abd4090)
-
-
 # DDDについて
 ## 10分でわかるDDDのアーキテクチャ
 https://little-hand-s.notion.site/8a666e49641248fa810ef382715cfe0f<br>
