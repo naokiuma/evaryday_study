@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="module">
 	import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
-		axios.get('../web.md')
+		axios.get('./src/web.md')
         	.then(response => document.querySelector('#content').innerHTML = marked(response.data));
     </script>
   </body>
