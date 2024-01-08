@@ -250,10 +250,11 @@ shopクーポン_1_の中でtype1<br>
 fromをクーポンにするなら<br>
 coupon	この中で情報は揃ってるはずなので、これを元にすると良さそう	
 
-## グループごとに上位いくつかを取得
+## グループごとに上位最新のいくつかを取得。
+サブクエリとしてjoinして行うやつ。あらかじめ上位に絞ったテーブルからサブクエリとして取得する。<br>
+https://zenn.dev/tokatu/articles/7e28a93349f75f<br>
+window関数、row_numberを利用。<br>
 https://qiita.com/ryota_i/items/8d0cc238c269fe9ca016<br>
-ちなみにrow_number使わずにやる方法。これ参考になる<br>
-https://gihyo.jp/dev/serial/01/sql_academy2/000102<br>
 
 ## codeignitorでのメモ
 fromにサブクエリをかくと、joinする時にエラーとなる（自動で括弧を増やしてしまう様子）。
