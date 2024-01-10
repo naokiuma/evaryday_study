@@ -1,3 +1,17 @@
+## デフォルトのDBストレージを確認
+
+```
+show engines;
+```
+![default](https://github.com/naokiuma/evaryday_study/assets/55546727/1616758e-de3a-44ba-937f-0508b197a7ff)
+
+defaultと書かれているところがデフォルトのストレージ
+
+
+## DBの空き容量を確認する
+
+下記途中
+
 ## 実行計画　'Using where; Using join buffer (Block Nested Loop)'の解決方法<br>
 https://ja.stackoverflow.com/questions/85258/using-where-using-join-buffer-block-nested-loop%e3%81%ae%e8%a7%a3%e6%b1%ba%e6%96%b9%e6%b3%95<br><br>
 
@@ -20,8 +34,6 @@ set profiling = 1;
 クエリ
 show profile;
 ```
-
-
 
 例題：ループで一つ一つ詰め込むとN+1問題が発生するので、一つのクエリにまとめてしまってはいいのでは？でもどっちの方がいいのか迷う。。。ようなとき。<br>
 一つのクエリでも、例えば別テーブルから紐づくshop_idの数を取るとかしている場合→<br>
