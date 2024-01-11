@@ -10,7 +10,21 @@ defaultと書かれているところがデフォルトのストレージ
 
 ## DBの空き容量を確認する
 
-下記途中
+・特定のテーブルの空き行を確認。data_freeがそれ。SQLでUPDATEやDELETEをした時に発生するゴミ
+```
+select table_schema, table_name, data_free, table_rows from information_schema.tables where table_name='test';
+```
+![data_free](https://github.com/naokiuma/evaryday_study/assets/55546727/a4d6bad8-b0d3-441a-a339-0408fb27964d)
+
+・index、データ容量、datafreeを調べる。data_freeが1以上のテーブルを洗い出す。
+```
+SELECT ENGINE,TABLE_NAME,
+ROUND(DATA_LENGTH/1024/1024) AS data_length_in_MiB,
+ROUND(INDEX_LENGTH/1024/1024) AS index_length_in_MiB,
+ROUND(DATA_FREE/ 1024/1024) AS data_free_in_MiB
+FROM INFORMATION_SCHEMA.TABLES
+WHERE DATA_FREE > 0;
+```
 
 ## 実行計画　'Using where; Using join buffer (Block Nested Loop)'の解決方法<br>
 https://ja.stackoverflow.com/questions/85258/using-where-using-join-buffer-block-nested-loop%e3%81%ae%e8%a7%a3%e6%b1%ba%e6%96%b9%e6%b3%95<br><br>
