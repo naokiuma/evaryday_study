@@ -1,3 +1,16 @@
+
+## DBの最適化について
+OPTIMIZE TABLE or ALTER TABLE。どちらも裏では同じ処理をしている。<br>
+ただし、 MySQL 5.6.17 より前のバージョンだと、 OPTIMIZE TABLE 実行中はテーブルロックがかかる。 5.6.17 からは、オンライン DDL が使える。<br>
+https://agohack.com/mysql-fragmention-optimization/
+<br><br>
+
+関連して、online ddl と普通のddlの違い。<br>
+mysql5.5以前は通常のddl(create、alter、index追加など)で、dml（通常のselect、insert、updateなど）をブロックしていた
+https://zenn.dev/taxin/articles/mysql-online-ddl
+
+mysql5.6以降はonlineDDLが使えるので、トランザクションとか、ロック中のメタデータがなければロックされることはまない。
+
 ## デフォルトのDBストレージを確認
 
 ```
