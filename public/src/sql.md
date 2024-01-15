@@ -9,7 +9,18 @@ https://agohack.com/mysql-fragmention-optimization/
 mysql5.5以前は通常のddl(create、alter、index追加など)で、dml（通常のselect、insert、updateなど）をブロックしていた
 https://zenn.dev/taxin/articles/mysql-online-ddl
 
-mysql5.6以降はonlineDDLが使えるので、トランザクションとか、ロック中のメタデータがなければロックされることはまない。
+```
+ALTER TABLE clean_test ENGINE=InnoDB, LOCK=NONE;
+```
+
+mysql5.6以降はonlineDDLが使えるので、基本的にalter table中もそのテーブルに対するDML(crudなどのi/o処理)はブロックしない。
+なお、lock=を指定しない場合、以下の順評価される。（指定していない場合はnoneとなる。）<br>
+NONE → SHARED → EXCLUSIVE<br>
+念の為、明示的にDML操作をブロックする「LOCK=SHARED」にすると、きちんとインサートがalter_tableが終わるまで止まりました。<br>
+以上のことより、現在のmysqlではalter_table中は対象テーブルも問題なくブロックはされないことが確認できました。<br>
+<br>
+参考：https://gihyo.jp/dev/serial/01/mysql-road-construction-news/0030<br>
+<br>
 
 ## デフォルトのDBストレージを確認
 
