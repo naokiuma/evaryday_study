@@ -13,7 +13,7 @@ https://zenn.dev/taxin/articles/mysql-online-ddl
 ALTER TABLE clean_test ENGINE=InnoDB, LOCK=NONE;
 ```
 
-mysql5.6以降はonlineDDLが使えるので、基本的にalter table中もそのテーブルに対するDML(crudなどのi/o処理)はブロックしない。
+mysql5.6以降はonlineDDLが使えるので、基本的にalter table中もそのテーブルに対するDML(crudなどのi/o処理)はブロックしない。<br>
 なお、lock=を指定しない場合、以下の順評価される。（指定していない場合はnoneとなる。）<br>
 NONE → SHARED → EXCLUSIVE<br>
 念の為、明示的にDML操作をブロックする「LOCK=SHARED」にすると、きちんとインサートがalter_tableが終わるまで止まりました。<br>
