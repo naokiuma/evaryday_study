@@ -1,3 +1,19 @@
+## mysqlにおけるデータ型諸々
+DATE型：日付部分のみを格納します。<br>
+形式：'YYYY-MM-DD'<br>
+例：'2024-01-21'<br>
+<br>
+TIME型:時刻部分のみを格納します。<br>
+形式：'HH:MM:SS'<br>
+例：'14:30:00'<br>
+<br>
+DATETIME型:日付と時刻を両方格納します。<br>
+形式：'YYYY-MM-DD HH:MM:SS'<br>
+例：'2024-01-21 14:30:00'<br>
+<br>
+TIMESTAMP型:日付と時刻を両方格納します。ただし、特定の条件下で自動的に更新される場合があります（例：DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP）。<br>
+形式：'YYYY-MM-DD HH:MM:SS'<br>
+例：'2024-01-21 14:30:00'<br><br>
 
 ## DBの最適化について
 OPTIMIZE TABLE or ALTER TABLE。どちらも裏では同じ処理をしている。<br>
