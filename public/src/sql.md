@@ -1,3 +1,16 @@
+## joinに迷ったら(パフォーマンス)
+shopテーブル：10000レコードのselect時、セレクトの中でshop_entry：20000レコードを同じshop_idのものを取得、カウント。<br>
+その上で最後にorder by カウント。<br><br>
+
+上記とは別に、あらかじめshop_entryをgroup byでshop_idでまとめてorder byし、多い件数のテーブルにする。<br>
+それを、shopとinnner join。<br>
+<br>
+結果は同じですが、後者の方が断然早い。実行計画では問題なかった。<br><br>
+indexがあるかとか、レコード数にもよるが、実行計画だけで判断せず、「あらかじめまとめてからjoinする」イメージを持つようにする。
+
+## joinに迷ったら
+joinするテーブルのカラムがwhere句で100%使用するた場合、LEFT JOIN で結合する意味はない。通常のJOINにしましょう。
+
 ## mysqlにおけるデータ型諸々
 DATE型：日付部分のみを格納します。<br>
 形式：'YYYY-MM-DD'<br>
