@@ -1,3 +1,12 @@
+## 速度改善メモ
+・Whereの中で計算をしない。selectなら大丈夫。<br>
+・joinするときの条件は、indexがあるもので。<br>
+・joinする前に絞り込め<br>
+https://www.w2solution.co.jp/corporate/tech/eg_ti_ti_sql5/<br><br>
+
+mysqlbベンチマークについて。ビジュアルexplainができるぞ<br>
+https://engineering.linecorp.com/ja/blog/mysql-workbench-index-behavior-with-visual-explain
+
 ## joinに迷ったら(パフォーマンス)
 shopテーブル：10000レコードのselect時、セレクトの中でshop_entry：20000レコードを同じshop_idのものを取得、count()。<br>
 その上で最後にorder by カウント。<br>
