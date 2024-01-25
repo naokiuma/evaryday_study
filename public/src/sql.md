@@ -19,7 +19,9 @@ indexがあるかとか、レコード数にもよるが、実行計画だけで
 「あらかじめまとめてからjoinする」イメージを持つようにする。またselectの中でカウントをしないよう気をつけよう。n+1。<br>
 
 ## joinに迷ったら
-joinするテーブルのカラムがwhere句で100%使用するた場合、LEFT JOIN で結合する意味はない。通常のJOINにしましょう。
+・joinするテーブルのカラムがwhere句で100%使用するた場合、LEFT JOIN で結合する意味はない。通常のJOINにしましょう。<br>
+・left joinでも、左側のテーブルが重複することはある。注意。<br>
+https://www.ipentec.com/document/sql-duplicate-records-with-join
 
 ## mysqlにおけるデータ型諸々
 DATE型：日付部分のみを格納します。<br>
