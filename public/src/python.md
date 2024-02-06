@@ -62,6 +62,7 @@ a,b,c = map(int,input().split())
  
  
  ## if文
+ ifの中では、returnはかけない。関数の中でしか書けないので注意。
  
  ```
  
