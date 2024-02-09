@@ -1,3 +1,11 @@
+## やらかしメモ
+mysql 5.7から8.0に上げる際、自動で文字列の照合順序が変わる。<br>
+そもそも異なる照合順序だとjoin結合の条件に使えない。<br><br>
+→intなどで結合しよう or 文字列の称号順序が変わることでjoinとかしていないかみておこう。
+<br>
+参考:https://offers.jp/worker_events/connpass_22
+
+
 ## 速度改善メモ
 ・Whereの中で計算をしない。selectなら大丈夫。<br>
 ・joinするときの条件は、indexがあるもので。<br>
