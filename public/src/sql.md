@@ -7,6 +7,13 @@ mysql 5.7から8.0に上げる際、自動で文字列の照合順序が変わ�
 
 
 ## 速度改善メモ
+
+・order_by狙いのindex、where狙いのindex。<br>
+どちらにするかの基準として、whereで十分絞り込めるならwhere狙いにしよう。<br>
+なぜorder_by狙いのindexが早いか？→indexを貼ることであらかじめ順序化してくれるし、必要な数取得できればその時点で結果を返してくれるため。<br>
+https://www.konosumi.net/entry/2020/03/15/234810<br>
+https://zenn.dev/suzuki_hoge/books/2022-12-database-index-9520da88d02c4f/viewer/2-background
+
 ・Whereの中で計算をしない。selectなら大丈夫。<br>
 ・joinするときの条件は、indexがあるもので。<br>
 ・joinする前に絞り込め<br>
