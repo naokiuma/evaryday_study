@@ -1,10 +1,20 @@
+## sshコマンドの補足
+```
+ssh aa@example.com -i hoge.pem -p 11111
+```
+aaはユーザー名で、example.comはホスト名。この部分は、接続先のリモートサーバー。<br>
+-i hoge.pemは、pemファイルの置き場所を指定。<br>
+-p 11111 は、ポート番号の指定
+
+
+
 ## ■ログ調査時の便利なコマンド
 
 grep系 （参考：https://eng-entrance.com/linux-command-grep#-v)
 
-マッチしないものを検索する
+マッチしないものを検索する。たとえば下記なら、1を含まない行を検索する
 ```
-grep -v ファイル名
+grep -v 1 ファイル名
 ```
 
 パイプラインで繋ぐと強力。<br>
@@ -27,7 +37,7 @@ tailf ssl_access.log | grep " 404 " | grep "GET /shop/"
 find -mtime 1
 ```
 
-## ■grepについて
+## grep、zgrepについて
 grep "500" access.log とか、zgrep "404" ファイル名とか。その文字列が存在しない場合はノーリアクションなので注意！<br>
 通常ファイルを試す場合　grep ‘探す文字列’ファイル名<br>
 Zipファイルを試す場合　zgrep  ‘探す文字列’ファイル名<br>
