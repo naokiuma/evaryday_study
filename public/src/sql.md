@@ -1,3 +1,18 @@
+## 日時比較の注意
+```
+SELECT id,cdate FROM `hoge` WHERE cdate <= '2024-03-05';
+```
+で、該当テーブルのcdateが
+2024-03-05 12:58:02のデータは取れるか？→取れない
+```
+SELECT id,cdate FROM `hoge` WHERE cdate <= '2024-03-05 23:59:59';
+```
+ならとれる。mysqlだけ？
+
+
+## カラムを加工したことでindexが効かなかった事例（わかりやすい！）
+https://serverlog.jp/mysql-sql-mistake-date/
+
 ## やらかしメモ
 mysql 5.7から8.0に上げる際、自動で文字列の照合順序が変わる。<br>
 そもそも異なる照合順序だとjoin結合の条件に使えない。<br><br>
