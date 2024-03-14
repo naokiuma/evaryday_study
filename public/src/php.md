@@ -1,3 +1,28 @@
+## try_catchについての豆知識
+tryのなかの関数などで、さらに下の階層がいくつかあり、何層か奥の関数で呼び出された例外でも、一番上の階層のcacthに入る。<br>
+例えばfunction Bで投げられた例外も、最初のcacthで捕まえられる。
+
+```
+try {
+    // 関数A内で関数Bを呼び出し
+    functionA();
+} catch (Exception $e) {
+    // エラーをキャッチして処理する
+    echo "エラーが発生しました: " . $e->getMessage();
+}
+
+function functionA() {
+    // 関数Bを呼び出し
+    functionB();
+}
+
+function functionB() {
+    // 例外を投げる
+    throw new Exception("例外が発生しました");
+}
+
+```
+
 ## 関数と計算量メモ
 ```
 $order_shop_ids = array_reverse($shop_ids);
