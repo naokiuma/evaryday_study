@@ -8,7 +8,7 @@ desktopにいる状態で行うと、laravel-appがdesktopに作られる。
 
 ## アプリ起動
 ```
- cd laravel-app && ./vendor/bin/sail u
+ cd laravel-app && ./vendor/bin/sail up
 ```
 対象のフォルダに移動し、起動。
 ### ※以降、sailを使ってるの操作が必要。
