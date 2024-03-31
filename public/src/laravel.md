@@ -1,3 +1,11 @@
+## make　modelの msとは
+mはモデルに関するマイグレーションを作り、sはseederに関するマイグレーションを作る
+
+```
+./vendor/bin/sail artisan make:model NewsletterUser -ms
+```
+
+
 # laravel sailでの環境構築
 
 ## アプリ構築
@@ -20,7 +28,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravel.sessions' doe
 テーブルの構築がまず必要。
 起動している状態のまま、vscodeなどから別のターミナルを使いlaravel-appに移動。その上で
 ```
-/vendor/bin/sail artisan migrate
+./vendor/bin/sail artisan migrate
 ```
 これでテーブルなどが用意される。
 
