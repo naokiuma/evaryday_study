@@ -1,3 +1,9 @@
+## 大量の画像をコピーしたい！
+以下で、今いるフォルダのあるa.pngを1.png、2.png...と大量に作ることができる
+```
+for i in {1..100}; do cp a.png $i.png; done
+```
+
 ## sshコマンドの補足
 ```
 ssh aa@example.com -i hoge.pem -p 11111
