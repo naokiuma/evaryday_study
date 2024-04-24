@@ -1,3 +1,7 @@
+## githubアクションの基礎
+GitHub に Push するだけで、レンタルサーバーにサイト公開してみた<br>
+https://www.to-r.net/media/github-actions/
+
 ## SPFレコードの調べ方
 whoisサイトで調べる方法<br>
 https://tamago.temonalab.com/support/manual/706
