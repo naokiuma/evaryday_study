@@ -1,3 +1,18 @@
+## mysqlworkbenchでインポート時にエラーになった件。
+アクセス権の問題。権限を変更できる。<br>
+https://mebee.info/2022/01/14/post-51780/#google_vignette<br>
+<br>
+GTIDが入っているとバージョン？によってインポートできない<br>
+set-gtid-purged - Add 'SET @@GLOBAL.GTID_PURGED' to the output.<br>
+mysqlworkbenchiのエクスポート時、上記設定をoffにしておくと以下のようなgtidの記述が入らない。これでインポートできる。
+```
+--
+-- GTID state at the beginning of the backup 
+--
+
+SET @@GLOBAL.GTID_PURGED=/*!80000 '+'*/ '';
+```
+
 ## 日時比較の注意
 ```
 SELECT id,cdate FROM `hoge` WHERE cdate <= '2024-03-05';
