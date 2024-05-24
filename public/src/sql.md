@@ -2,9 +2,7 @@
 アクセス権の問題。権限を変更できる。<br>
 https://mebee.info/2022/01/14/post-51780/#google_vignette<br>
 <br>
-GTIDが入っているとバージョン？によってインポートできない<br>
-set-gtid-purged - Add 'SET @@GLOBAL.GTID_PURGED' to the output.<br>
-mysqlworkbenchiのエクスポート時、上記設定をoffにしておくと以下のようなgtidの記述が入らない。これでインポートできる。
+このようにエクスポートデータにGTIDが入っているとバージョン？によってインポートできない<br>
 ```
 --
 -- GTID state at the beginning of the backup 
@@ -12,6 +10,11 @@ mysqlworkbenchiのエクスポート時、上記設定をoffにしておくと�
 
 SET @@GLOBAL.GTID_PURGED=/*!80000 '+'*/ '';
 ```
+mysqlworkbenchiのエクスポート時、下記の設定をoffにしておくと上のようなgtidの記述が入らない。これでインポートできる。<br>
+set-gtid-purged - Add 'SET @@GLOBAL.GTID_PURGED' to the output.
+![スクリーンショット 2024-05-24 12 33 40](https://github.com/naokiuma/evaryday_study/assets/55546727/11eacf91-4a10-464c-b137-bbda792edbb7)
+
+
 
 ## 日時比較の注意
 ```
