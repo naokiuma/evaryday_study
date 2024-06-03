@@ -1,3 +1,6 @@
+## git 特定のファイルを無視したい。
+https://qiita.com/usamik26/items/56d0d3ba7a1300625f92
+
 ## githubアクションの基礎
 GitHub に Push するだけで、レンタルサーバーにサイト公開してみた<br>
 https://www.to-r.net/media/github-actions/
