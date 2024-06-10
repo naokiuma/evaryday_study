@@ -1,3 +1,17 @@
+# injectableがやってること
+
+こういうの。
+```
+@Injectable()
+export class UsersService {
+  constructor(
+    @InjectRepository(User)
+    private readonly userRepository: Repository<User>,
+  ) {}
+```
+→このUserを、オーソドックスに使えるようにしている
+https://qiita.com/potato4d/items/64a1f518abdfe281ce01
+
 # ログの出し方
 シンプルにconsole.log
 出したいファイルで
