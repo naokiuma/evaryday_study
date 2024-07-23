@@ -1,3 +1,12 @@
+## 大量のsqlのupdateを止める処理
+```
+SET SQL_SAFE_UPDATES = 1;
+```
+許す場合
+```
+SET SQL_SAFE_UPDATES = 0;
+```
+
 ## mysqlworkbenchでインポート時にエラーになった件。
 アクセス権の問題。権限を変更できる。<br>
 https://mebee.info/2022/01/14/post-51780/#google_vignette<br>
