@@ -1,3 +1,14 @@
+## コマンドライン操作
+```
+・Ctrl +  L  // 消せる、clearと同様
+・set:number //vim利用時、行数も出せる
+・:50 //50行目に移動
+・:1,50 d //1~50行目が消えるので、特定の行だけ消すなどの手順で使える
+・sudo tail -f /var/log/cron //該当ファイルを、リアルタイムで確認できる(ctrl + cで中断)
+・sudo catでログを見るなら、sudo lessとかの方がぱっと見れるよ！
+・また、ファイルを見てる時ggで最初に移動し、Gで末尾に移動
+```
+
 ## docker compose exec -ti とは？
 docker compose exec -ti コマンドは、Docker Compose を使用して実行中のコンテナ内でコマンドを実行するためのものです。<br>
 これは docker exec -it コマンドに似ていますが、Docker Compose のサービス名を使用して特定のコンテナにアクセスします。<br><br>
