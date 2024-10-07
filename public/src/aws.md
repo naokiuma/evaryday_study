@@ -3,7 +3,7 @@
 ```
 ec2-user ec2-user  52 Apr 25  2000 html -> /mnt/efs1/contents/example.jp/html/
 ```
-これは、これはシンボリックリンクであり、このパスから推測すると、EFS (Elastic File System) が使用されている可能性がある
+これはシンボリックリンクであり、このパスから推測すると、EFS (Elastic File System) が使用されている可能性がある
 
 ALB(アプリケーションロードバランサー)<br>
 から<br>
